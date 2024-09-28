@@ -34,13 +34,13 @@ const ScrollToTop = () => {
     <>
       {showTopButton && (
         <motion.button
-          className="fixed bottom-8 right-2 lg:right-8 p-4 bg-transparent border text-white rounded-full shadow-lg z-50 transition-all"
+          className="fixed bottom-8 right-2 lg:right-8 p-3 bg-[#181B20] border text-white rounded-full shadow-lg z-50 transition-all"
           onClick={scrollToTop}
           whileHover={{
             scale: 1.1,
           }}
         >
-          <div className="relative w-8 h-8 lg:w-14 lg:h-14 flex items-center justify-center">
+          <div className="relative w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center">
             <div className="absolute inset-0 w-full h-full rounded-full border-4  opacity-50 animate-spin-slow"></div>
             <div className="absolute inset-0 w-full h-full rounded-full border-2 "></div>
             <ChevronUp className="text-white" size={24} />

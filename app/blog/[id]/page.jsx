@@ -141,7 +141,13 @@ const BlogDetailPage = ({ params }) => {
   }
 
   return (
-    <div className="min-h-screen max-w flex flex-col justify-center mx-auto  sm:px-[5%]  text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
+    <div
+      className="min-h-screen max-w flex flex-col justify-center mx-auto  sm:px-[5%]  text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(0, 0, 0, 0), rgba(19, 21, 25, 0.78) 21%, rgb(24, 27, 32)), url(https://cdn.prod.website-files.com/664ba4a670588e767b305203/664ba4a670588e767b30528a_Ellipse%20BG.png)",
+      }}
+    >
       <div className="max-w-4xl mx-auto p-6 lg:p-12 text-white">
         <div className="mb-8">
           <Link href="/" className="text-purple-400">
