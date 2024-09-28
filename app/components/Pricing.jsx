@@ -3,6 +3,7 @@ import {
   AnimatedCard,
   AnimatedHeader,
   AnimatedSection,
+  AnimatedSmallText,
 } from "@/lib/animations";
 import { IoCheckmark } from "react-icons/io5";
 const pricingPlans = [
@@ -117,11 +118,18 @@ const PricingSection = () => {
   const [billingCycle, setBillingCycle] = useState("monthly");
 
   return (
-    <AnimatedSection className="mx-auto p-6">
+    <AnimatedSection className="mx-auto p-2  lg:p-6 text-[#D0D6DE]">
       {/* Toggle between Monthly and Yearly pricing */}
+      <AnimatedHeader className="text-center text-5xl font-bold mb-6 text-pink-300">
+        Pricing Plan
+      </AnimatedHeader>
+      <AnimatedSmallText className="text-center text-lg mb-6 text-[#d0d6de]">
+        Check out your ideal AI companion plan – Tailored to your needs !{" "}
+      </AnimatedSmallText>
+
       <div className="flex justify-center text-[16px] mb-6 border max-w-fit rounded-3xl mx-auto bg-transparent">
         <span
-          className={`px-4 py-2 rounded-full cursor-pointer ${
+          className={`px-6 lg:px-8 py-2 rounded-full cursor-pointer ${
             billingCycle === "monthly"
               ? "text-black bg-[#D0D6DE]"
               : "text-white"
@@ -131,7 +139,7 @@ const PricingSection = () => {
           Monthly
         </span>
         <span
-          className={`px-4 py-2 rounded-full ml-2 cursor-pointer ${
+          className={` px-6 lg:px-8 py-2 rounded-full ml-2 cursor-pointer ${
             billingCycle === "yearly" ? "text-black bg-[#D0D6DE]" : "text-white"
           }`}
           onClick={() => setBillingCycle("yearly")}

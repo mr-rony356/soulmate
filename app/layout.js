@@ -1,8 +1,10 @@
-import { Poppins } from "next/font/google";
+// app/layout.js or layout.tsx
+
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./ui/Header";
-import Footer from "./ui/Footer";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop"; // Import the ScrollToTop component
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,11 +21,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} font-sans antialiased mt-8 bg-[#191B20] `}
+        className={`${montserrat.variable} font-sans antialiased mt-8 bg-[#191B20]`}
       >
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
+        <ScrollToTop /> {/* Use ScrollToTop component */}
       </body>
     </html>
   );

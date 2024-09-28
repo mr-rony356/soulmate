@@ -10,9 +10,9 @@ import {
 
 const Hero = () => {
   return (
-    <AnimatedSection className="relative text-white h-screen flex flex-col items-center justify-between">
+    <AnimatedSection className="relative text-white flex flex-col items-center justify-between">
       {/* Hero Image */}
-      <div className="w-full relative h-[340px]">
+      <div className="w-full relative lg:h-[340px] h-[200px]">
         <Image
           src="/herobg.png" // Replace with your actual image path
           alt="Hero background"
@@ -25,7 +25,7 @@ const Hero = () => {
 
       {/* Text content */}
       <div className="relative z-10 text-center  lg:max-w-2xl w-full">
-        <AnimatedHeader className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-6">
+        <AnimatedHeader className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mt-6 ">
           Rediscover virtual relationships
         </AnimatedHeader>
         <AnimatedSmallText className="text-lg mt-10 text-gray-400">

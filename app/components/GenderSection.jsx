@@ -5,6 +5,7 @@ import {
   AnimatedHeader,
   AnimatedSection,
 } from "@/lib/animations";
+import { BiMessageDetail } from "react-icons/bi";
 import { PiGenderFemaleLight } from "react-icons/pi";
 import { IoIosMale } from "react-icons/io";
 import Link from "next/link";
@@ -39,13 +40,20 @@ const ProfileCard = ({ name, gender, seed, custom }) => {
       >
         <Link href={`/product/${gender}/${name}`}>
           <div className="bg-[#191B20] p-6 rounded-lg">
-            <Image
-              src={imageUrl}
-              width={500}
-              height={500}
-              alt={name}
-              className="mb-4 rounded-md"
-            />
+            <div className="relative">
+              <img
+                src="/message.svg"
+                className="absolute top-2 h-12 w-12  right-2 font-bold text-black text-4xl  p-1 rounded-full"
+              />
+
+              <Image
+                src={imageUrl}
+                width={500}
+                height={500}
+                alt={name}
+                className="mb-4 rounded-md"
+              />
+            </div>
             <h3 className="text-xl font-semibold mb-2 text-white">{name}</h3>
             <p className="text-gray-300">Age: {age}</p>
             <p className="text-gray-400 mt-2">{description}</p>
@@ -60,8 +68,8 @@ const GenderToggleProfiles = () => {
   const [selectedGender, setSelectedGender] = useState("female");
 
   return (
-    <AnimatedSection className="mx-auto p-6">
-      <div className="flex justify-center mb-6 space-x-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 font-semibold">
+    <AnimatedSection className="mx-auto p-2 lg:p-6">
+      <div className="flex text-lg  justify-center mb-6 space-x-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 font-semibold">
         <button
           className={`px-4 py-2 rounded-full flex items-center gap-2 shadow-md ${
             selectedGender === "female" ? "border" : ""
@@ -92,6 +100,13 @@ const GenderToggleProfiles = () => {
             />
           )
         )}
+      </div>
+      <div className="flex justify-center mt-16">
+        <Link href={`/product/${selectedGender}`}>
+          <button className="mt-8 px-20 text-lg py-3 rounded-[32px]  transition text-[#D195C3] border">
+            See more
+          </button>
+        </Link>
       </div>
     </AnimatedSection>
   );

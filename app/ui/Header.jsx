@@ -125,14 +125,14 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden  flex items-center justify-center gap-3">
-          <FaUserCircle className="text-white text-xl cursor-pointer " />
+        <div className="md:hidden  flex items-center justify-center gap-6">
+          <FaUserCircle  size={26} className="text-white text-xl cursor-pointer " />
 
           <button
             className="md:hidden w-10 h-10 flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
         </div>
       </div>
@@ -173,11 +173,11 @@ const Header = () => {
                 Blog
               </Link>
             </motion.div>
-            <div className="flex items-center justify-center space-x-4 mt-8">
+            <div className="flex items-center justify-center space-x-4 mt-8 text-[#C488D3]">
               {languages.map((lang) => (
                 <button
                   key={lang}
-                  className={`text-lg ${
+                  className={`text-lg pb-2  ${
                     selectedLang === lang ? "underline" : ""
                   }`}
                   onClick={() => setSelectedLang(lang)}
