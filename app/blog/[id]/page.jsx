@@ -154,7 +154,7 @@ const BlogDetailPage = ({ params }) => {
             ← Back to Blog
           </Link>
         </div>
-        <AnimatedHeader className="text-center  text-4xl lg:text-5xl font-bold my-8 text-purple-400">
+        <AnimatedHeader className="text-center  text-4xl lg:text-5xl font-bold mb-12 my-8 text-purple-400">
           {post.title}{" "}
         </AnimatedHeader>
 

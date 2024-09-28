@@ -511,3 +511,26 @@ strong {
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+.element-grad {
+  background: linear-gradient(
+      360deg,
+      #181b20ae 90%,
+      rgba(19, 21, 25, 0.78) 95%,
+      rgb(24, 27, 32)
+    ),
+    url(https://cdn.prod.website-files.com/664ba4a670588e767b305203/664ba4a670588e767b30528a_Ellipse%20BG.png);
+  /* Other styles */
+}
+.join-grad {
+  background: linear-gradient(
+      360deg,
+      rgba(19, 21, 25, 0.377) 50%,
+      rgb(24, 27, 32)
+    ),
+    url(https://cdn.prod.website-files.com/664ba4a670588e767b305203/664ba4a670588e767b30528a_Ellipse%20BG.png);
+  /* Other styles */
+}
+/* .circle-grad {
+  background: radial-gradient( circle at top center, rgb(25, 27, 32), rgba(45, 31, 61, 1));
+} */

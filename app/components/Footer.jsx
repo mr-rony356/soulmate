@@ -13,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#191B20] text-white py-12 px-4 md:mx-0">
+    <footer className="bg-[#191B20] text-white pb-6 px-4 md:mx-0">
       <div className="max-w-7xl mx-auto">
 
         {/* Footer Links */}

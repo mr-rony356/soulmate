@@ -26,15 +26,27 @@ const Home = () => {
     <div className="w-full mx-auto max-w-screen-2xl">
       <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
         <HeroSection />
+      </div>
+      <div className="element-grad">
+      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
+
         <GenderToggleProfiles />
         <PricingSection />
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
         <HowItWorksSection />
         <TestimonialsSection />
         <BlogSection />
         <FAQSection />
+      </div>
+      <div>
         <JoinUs />
+      </div>
+      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
         {/* Newsletter Subscription */}
-        <AnimatedSection className="bg-[#1D2127] rounded-lg p-6 mb-12 flex flex-col md:flex-row justify-between">
+        <AnimatedSection className="bg-[#1D2127] rounded-lg p-6  flex flex-col md:flex-row justify-between">
           <div>
             <AnimatedHeader className="text-lg font-semibold mb-2 text-center">
               Subscribe to our newsletter
