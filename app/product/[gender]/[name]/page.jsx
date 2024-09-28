@@ -56,11 +56,11 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className=" min-h-screen bg-[#1D2127] mt-8  mx-auto  p-6 md:p-12 lg:p-12 max-w-screen-xl rounded-xl shadow-lg  px-4 md:mx-0">
+    <div className=" min-h-screen bg-[#1D2127] mt-8 mx-4   p-6 md:p-12 lg:p-12 max-w-screen-xl rounded-xl shadow-lg  px-4 md:mx-0">
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="flex justify-center lg:justify-start lg:w-1/2">
           <div className=" rounded-lg max-w-md mx-auto  ">
-            <AnimatedHeader className="text-4xl mb-2 text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <AnimatedHeader className="text-4xl mb-6 text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               {userData.name}
             </AnimatedHeader>
             <AnimatedSection className="mx-auto lg:p-6">
@@ -69,12 +69,12 @@ const ProfilePage = () => {
                 width={500}
                 height={500}
                 alt={userData.name}
-                className="lg:mb-4 rounded-3xl"
+                className="lg:mb-4 rounded-3xl mb-2"
               />
             </AnimatedSection>
 
             {/* Additional Images */}
-            <div className="grid grid-cols-4 gap-0 md:pl-4  my-4 mb-20 md:mb-0">
+            <div className="grid grid-cols-4 gap-4 md:gap-0 md:pl-4  my-4 mb-20 md:mb-0">
               {userImages.slice(1).map((image, idx) => (
                 <Image
                   key={idx}

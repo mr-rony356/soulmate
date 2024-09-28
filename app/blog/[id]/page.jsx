@@ -154,33 +154,31 @@ const BlogDetailPage = ({ params }) => {
             ← Back to Blog
           </Link>
         </div>
-        <AnimatedHeader className="text-center text-5xl font-bold my-6 text-purple-400">
+        <AnimatedHeader className="text-center  text-4xl lg:text-5xl font-bold my-8 text-purple-400">
           {post.title}{" "}
         </AnimatedHeader>
 
-        <p className="text-gray-500 mb-6">
-          {post.date} · {post.readTime} · {post.author}
-        </p>
-
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4  !mt-6">
           <Image
             src={post.imgSrc}
             alt={post.author}
-            className="w-16 h-16 object-cover rounded-full"
+            className="w-16 h-16 object-cover rounded-full "
             width={100}
             height={100}
           />
           <div>
             <p className="font-semibold">{post.author}</p>
-            <p className="text-sm text-gray-500">{post.date}</p>
+            <p className="text-sm text-gray-500">
+              {post.date} . {post.readTime}{" "}
+            </p>
           </div>
         </div>
       </div>
-      <div className="rounded-xl overflow-hidden shadow-lg mb-8">
+      <div className="rounded-xl overflow-hidden shadow-lg mb-0 lg:mb-8">
         <Image
           src={post.image}
           alt={post.title}
-          className="w-full h-[700px] object-cover rounded-xl"
+          className="w-full h-[300px] lg:h-[700px] object-cover rounded-xl"
           width={1000}
           height={1000}
         />

@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
       </AnimatedHeader>
 
       {/* Dynamic Card Container */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-24">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
         {cards.map((card, index) => (
           <AnimatedCard key={card.id} custom={index + 1}>
             <div
