@@ -118,16 +118,22 @@ const PricingSection = () => {
   const [billingCycle, setBillingCycle] = useState("monthly");
 
   return (
-    <AnimatedSection className="mx-auto p-2  lg:p-6 text-[#D0D6DE]">
+    <AnimatedSection
+      className="relative mx-auto p-2 lg:p-6 text-[#D0D6DE] 
+    before:content-[''] before:absolute before:inset-0 
+    before:z-0 md:before:bg-[radial-gradient(circle,_#A971EE,_transparent_55%)] before:bg-[radial-gradient(circle,_#A971EE,_transparent_5%)] 
+    before:w-[60%] before:h-[50%] before:left-[20%] before:top-[30%] 
+    md:before:w-[80%] md:before:h-[70%] md:before:left-[10%] md:before:top-[20%]"
+    >
       {/* Toggle between Monthly and Yearly pricing */}
-      <AnimatedHeader className="text-center text-5xl font-bold mb-6 text-pink-300">
+      <AnimatedHeader className="relative z-10 text-center text-5xl font-bold mb-6 text-pink-300">
         Pricing Plan
       </AnimatedHeader>
-      <AnimatedSmallText className="text-center text-lg mb-6 text-[#d0d6de]">
-        Check out your ideal AI companion plan – Tailored to your needs !{" "}
+      <AnimatedSmallText className="relative z-10 text-center text-lg mb-6 text-[#d0d6de]">
+        Check out your ideal AI companion plan – Tailored to your needs!
       </AnimatedSmallText>
 
-      <div className="flex justify-center text-[16px] mb-6 border max-w-fit rounded-3xl mx-auto bg-transparent">
+      <div className="relative z-10 flex justify-center text-[16px] mb-6 border max-w-fit rounded-3xl mx-auto bg-transparent">
         <span
           className={`px-6 lg:px-8 py-2 rounded-full cursor-pointer ${
             billingCycle === "monthly"
@@ -149,18 +155,16 @@ const PricingSection = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 auto-rows-fr">
-        {" "}
-        {/* Add auto-rows-fr here */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10 auto-rows-fr">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} plan={plan} billingCycle={billingCycle} />
         ))}
       </div>
-      <div className="text-center text-gray-400 mt-12 text-lg">
+      <div className="relative z-10 text-center text-gray-400 mt-12 text-lg">
         Choose your ideal virtual AI companion and elevate your relationship
         with seamless WhatsApp interactions. Enjoy lifelike, personalized
         conversations tailored to your emotional and social needs. Begin your
-        journey with Soulmaite today and experience the future of relationship !
+        journey with Soulmaite today and experience the future of relationships!
       </div>
     </AnimatedSection>
   );

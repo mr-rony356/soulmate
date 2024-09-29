@@ -16,7 +16,7 @@ const blogPosts = [
     author: "Marc Vuissoz",
     date: "July 31, 2024",
     readTime: "10 min read",
-    image: "/blog1.png",
+    image: "/blog.png",
     category: "Business",
     imgSrc: "/review.jpg", // Update with your actual image paths
   },
@@ -28,7 +28,7 @@ const blogPosts = [
     author: "Emma Johnson",
     date: "August 5, 2024",
     readTime: "8 min read",
-    image: "/blog1.png",
+    image: "/blog.png",
     category: "Technology",
     imgSrc: "/review.jpg", // Update with your actual image paths
   },
@@ -40,7 +40,7 @@ const blogPosts = [
     author: "Dr. Alex Chen",
     date: "August 12, 2024",
     readTime: "12 min read",
-    image: "/blog1.png",
+    image: "/blog.png",
     category: "Ethics",
     imgSrc: "/review.jpg", // Update with your actual image paths
   },
@@ -76,48 +76,52 @@ const BlogSection = () => {
 
 const FeaturedCard = ({ post }) => (
   <Link href={`/blog/${post.id}`}>
-  <div className=" rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
-    <div
-      style={{
-        backgroundImage:
-          "linear-gradient(rgb(167, 112, 239), rgb(253, 185, 155))",
-      }}
-      className="p-[2px] rounded-xl"
-    >
-      <Image
-        src={post.image}
-        alt={post.title}
-        className="w-full h-52 object-cover rounded-xl "
-        width={100}
-        height={100}
-      />
-    </div>
-
-    <div className="py-6 flex flex-col gap-4">
-      <span className="text-sm font-semibold text-[#C488D3]">
-        {post.category}
-      </span>
-      <h3 className="text-xl font-bold mt-2 mb-3">{post.title}</h3>
-      <p className="text-gray-400 mb-4">{post.excerpt}</p>
-      <div className="flex items-center justify-between">
-        <div className="flex gap-4">
+    <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl">
+      <div
+        style={{
+          backgroundImage:
+            "linear-gradient(rgb(167, 112, 239), rgb(253, 185, 155))",
+        }}
+        className="p-[2px] rounded-xl"
+      >
+        <div className="overflow-hidden rounded-xl">
+          {" "}
+          {/* Wrap Image with overflow-hidden */}
           <Image
-            src={post.imgSrc}
+            src={post.image}
             alt={post.title}
-            className="w-12 h-12 object-cover rounded-full "
-            width={100}
-            height={100}
+            className="w-full h-52 object-cover rounded-xl transition-transform duration-500 ease-out hover:scale-110" // Added scale effect
+            width={1000}
+            height={1000}
           />
-          <div className="flex flex-col">
-            <p className="font-semibold">{post.author}</p>
-            <p className="text-sm text-gray-500">
-              {post.date} · {post.readTime}
-            </p>
+        </div>
+      </div>
+
+      <div className="py-6 flex flex-col gap-4">
+        <span className="text-sm font-semibold text-[#C488D3]">
+          {post.category}
+        </span>
+        <h3 className="text-xl font-bold mt-2 mb-3">{post.title}</h3>
+        <p className="text-gray-400 mb-4">{post.excerpt}</p>
+        <div className="flex items-center justify-between">
+          <div className="flex gap-4">
+            <Image
+              src={post.imgSrc}
+              alt={post.title}
+              className="w-12 h-12 object-cover rounded-full"
+              width={100}
+              height={100}
+            />
+            <div className="flex flex-col">
+              <p className="font-semibold">{post.author}</p>
+              <p className="text-sm text-gray-500">
+                {post.date} · {post.readTime}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </Link>
 );
 

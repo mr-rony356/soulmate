@@ -60,7 +60,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 text-white bg-[#191B20]">
+    <section className=" text-white bg-[#191B20]">
       {/* Header */}
       <AnimatedHeader className="text-center text-5xl font-bold mb-12">
         Hear from our happy users

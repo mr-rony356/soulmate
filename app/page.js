@@ -28,14 +28,13 @@ const Home = () => {
         <HeroSection />
       </div>
       <div className="element-grad">
-      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
-
-        <GenderToggleProfiles />
-        <PricingSection />
+        <div className="flex flex-col justify-center sm:px-[5%] text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
+          <GenderToggleProfiles />
+          <PricingSection />
         </div>
       </div>
 
-      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
+      <div className="flex flex-col justify-center sm:px-[5%] text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
         <HowItWorksSection />
         <TestimonialsSection />
         <BlogSection />
@@ -44,7 +43,7 @@ const Home = () => {
       <div>
         <JoinUs />
       </div>
-      <div className="flex flex-col justify-center sm:px-[5%] py-12 lg:py-24 text-white overflow-x-hidden gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
+      <div className="flex flex-col justify-center sm:px-[5%] text-white overflow-x-hidden  py-12 gap-20 xl:max-w-screen-2xl  px-4 md:mx-0">
         {/* Newsletter Subscription */}
         <AnimatedSection className="bg-[#1D2127] rounded-lg p-6  flex flex-col md:flex-row justify-between">
           <div>
